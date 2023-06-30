@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/quiz-48.png">
+    <title>Quiz app</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- homepage -->
+        <section class="homeSec">
+            <!-- User details section -->
+            <div class="userDetailsSec">
+                <img src="./images/logo.jpg" alt="logo image">
+                <h1>Hello User!</h1>
+                <h4>Enter your name to continue the Quiz.</h4>
+                <div class="inputAndBtncontainer">
+                    <input id="userNameInput" type="text" spellcheck="false" autocomplete="on"
+                        placeholder="Enter your name.." required>
+                    <button id="enterBtn">ENTER</button>
+                </div>
+                <div class="greetingAndErrorParaDiv">
+                    <p class="greetingAndErrorPara"> </p>
+                </div>
+                <p>You'll have 10 seconds to answer each questions</p>
+            </div>
+            <hr>
+            <!-- category section -->
+            <div class="categorySec">
+                <h1>Select category</h1>
+                <br>
+                <div class="categoryBtnsDiv">
+                    <button class="categoryBtns" id="pipesAndCisternsBtn" disabled>Pipes And Cisterns</button>
+                    <button class="categoryBtns" id="probabilityBtn" disabled>Probability</button>
+                    <button class="categoryBtns" id="problemOnAgesBtn" disabled>Problem On Ages</button>
+                    <button class="categoryBtns" id="profitAndLossBtn" disabled>Profit And Loss</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- quiz page -->
+        <section class="quizSec">
+            <!-- showing heading from the choosed category -->
+            <h1 id="choosedCategoryHeading"></h1>
+            <div class="timerAndSCoreDiv">
+                <div id="timerDiv">
+                    <h3 id="timer"></h3>
+                </div>
+                <p>SCORE: <span id="score">0</span></p>
+            </div>
+            <!-- question container -->
+            <div class="questionContainer">
+                <div class="questionNoDiv">
+                    <h2><span id="questionNo"></span>/10</h2>
+                </div>
+                <p id="question">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, aspernatur odio sint
+                    dicta officiis fugiat inventore cum exercitationem error quisquam. Nostrum tempora accusantium
+                    sapiente provident rerum quo, magnam dicta doloremque!</p>
+            </div>
+            <!-- option buttons -->
+            <div class="optionButtonsContainer">
+                <button id="opt1Btn" class="optBtns"></button>
+                <button id="opt2Btn" class="optBtns"></button>
+                <button id="opt3Btn" class="optBtns"></button>
+                <button id="opt4Btn" class="optBtns"></button>
+            </div>
+            <button id="nextBtn">Next</button>
+            <button id="showResultBtn">Show Result</button>
+        </section>
+
+        <!-- Result page -->
+        <section class="resultSec">
+            <h1 class="quizResultHeading">Quiz Result</h1>
+            <p><span id="userNameShow"></span> your result is:</p>
+            <p>Total time taken : <span id="timeTaken"></span> seconds</p>
+            <p>Total Questions : <span>10</span></p>
+            <p>Attempt : <span id="attempt"></span></p>
+            <p>Correct : <span id="totalCorrectAns"></span></p>
+            <p>Wrong : <span id="totalwrongAns"></span></p>
+            <p>Percentage : <span id="percentage"></span>%</p>
+            <div class="startAndHomeBtnDiv">
+                <button id="startAgainBtn">Start Again</button>
+                <button id="GoToHomeBtn">Go To Home</button>
+            </div>
+        </section>
+    </div>
+    <script src="./javascript.js"></script>
+</body>
+
+</html>

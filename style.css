@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container > section{
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem 0.5rem silver ;
+    font-size: 1.5rem;
+    width: 50rem ;
+    height: 36rem;
+}
+
+.userDetailsSec{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.8rem;
+} 
+.userDetailsSec > img{
+    margin-top: 1rem;
+    width: 6rem;
+    height: 6rem;
+}
+.userDetailsSec > h1,.categorySec > h1{
+    color:skyblue;     
+}
+
+#userNameInput{
+    width: 20rem;
+    outline: none;
+    border-radius: 0.2rem;
+    border: 0.2rem solid silver;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+}
+.inputAndBtncontainer > button{
+    font-size: 1rem;
+    color: white;
+    width: 6rem;
+    height: 2.3rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(2, 140, 194);
+}
+.greetingAndErrorParaDiv{
+    height: 2rem;
+}
+.greetingAndErrorPara{
+    visibility: hidden;
+}
+.greeting{
+    color:#00A86B;
+}
+.errorMsg{
+    color: red;
+}
+ hr{
+    width: 90%;
+}
+.categorySec{
+    text-align: center;
+padding-top: 1rem;
+
+      
+}
+
+.categoryBtnsDiv{
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem 4rem;
+    justify-content: center;
+}
+
+.categoryBtnsDiv > button{
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 20rem;
+    border: 0.2rem solid skyblue;
+     border-radius: 2rem;
+    background-color: rgb(212, 243, 255);
+}
+
+.quizSec{
+    display: none;
+    align-items: center;
+    flex-direction: column; 
+    padding: 1rem;
+
+}
+#timerDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem  solid skyblue;
+    border-radius: 50%;
+    color: skyblue;
+}
+.timeupAlert{
+    border-color:#FF3800 !important;
+    color: #FF3800 !important;
+}
+#score{
+     font-weight: bolder;
+}
+.timerAndSCoreDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.questionContainer{
+    margin-top:2rem ;
+    border: 0.2rem solid black;
+    position: relative;
+    border-radius: 0.5rem;
+    padding:2rem ;
+
+}
+
+.questionNoDiv{
+    position: absolute;
+    top: -2.5rem;
+    left: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 0.2rem solid skyblue;
+    border-radius: 50%;
+    background-color: white;
+}
+.questionNoDiv > h2{
+    font-size:1.8rem;
+    color: skyblue;
+
+}
+#question{
+  text-align: justify;
+  user-select: none;
+}
+
+.optionButtonsContainer{
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem 2rem;
+}
+
+.optionButtonsContainer > button,#nextBtn,#showResultBtn{
+    margin-top: 1rem;
+    border-radius: 2rem;
+    border: 0.2rem solid skyblue;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.optionButtonsContainer > button[disabled]{
+        
+    border: 0.2rem solid skyblue;
+    color: initial;
+}
+.wrongAns{
+    background-color: #FF3800;
+    border: 0.2rem solid #FF3800  !important ;
+}
+.correctAns{
+    background-color:skyblue ;
+    color: white !important;
+}
+#nextBtn, #showResultBtn{
+    width: 15rem;
+    background-color: skyblue;
+    color: white;
+
+}
+#showResultBtn{
+display:none;
+}
+.resultSec{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.quizResultHeading{
+    color: skyblue;
+}
+.resultSec span{
+    font-weight: bolder;
+}
+.startAndHomeBtnDiv{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+.startAndHomeBtnDiv > button{
+background-color: skyblue;
+border: none;
+color: white;
+width: 10rem;
+padding: 1rem;
+border-radius: 2rem;
+font-size: 1.3rem;
+}
+
+@media screen and  (max-width: 1024px) {
+    html{
+         font-size: 90%;
+    }
+    
+}
+@media screen and  (max-width: 768px) {
+    html{
+         font-size: 80%;
+    }
+    
+}
+
+@media screen and  (max-width: 425px) {
+    html{
+         font-size:45%;
+    }
+    
+}
+@media screen and  (max-width: 375px) {
+    html{
+         font-size:40%;
+    }
+    
+}
+@media screen and  (max-width: 320px) {
+    html{
+         font-size:35%;
+    }
+    
+}
